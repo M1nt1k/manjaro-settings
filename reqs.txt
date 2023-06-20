@@ -1,0 +1,6 @@
+hyprland-git
+waybar-hyprland-git
+mako
+wofi
+alsa-utils
+roger

@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+##
+## Autostart Programs
+
+# Kill already running process
+_ps=(waybar swww mako mpd xfce-polkit)
+for _prs in "${_ps[@]}"; do
+	if [[ `pidof ${_prs}` ]]; then
+		killall -9 ${_prs}
+	fi
+done
+
+# Polkit agent
+/usr/lib/xfce-polkit/xfce-polkit &
+
+# Set wallpaper
+swww init &
+EXPORT $SWWW_TRANSITION_STEP = 90
+EXPORT $SWWW_TRANSITION_DURATION = 1
+swww img ~/.config/hypr/wallpapers/wallpaper.png &
+# swaybg --output '*' --mode fill --image ~/.config/hypr/wallpapers/01-wall.jpg &
+# mpvpaper -o "no-audio --loop-playlist" '*' ~/.config/hypr/wallpapers/videos/actual/ &
+
+# Apply themes
+~/.config/hypr/scripts/gtkthemes &
+
+# Lauch notification daemon (mako)
+~/.config/hypr/scripts/notifications &
+
+# Lauch statusbar (waybar)
+~/.config/hypr/scripts/statusbar &
+
+# Start mpd
+exec mpd &
