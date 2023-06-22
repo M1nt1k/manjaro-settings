@@ -19,7 +19,7 @@ done
 swww init &
 EXPORT $SWWW_TRANSITION_STEP = 90
 EXPORT $SWWW_TRANSITION_DURATION = 1
-swww img ~/.config/hypr/wallpapers/wallpaper.png &
+# swww img ~/.config/hypr/wallpapers/wallpaper.png &
 # swaybg --output '*' --mode fill --image ~/.config/hypr/wallpapers/01-wall.jpg &
 # mpvpaper -o "no-audio --loop-playlist" '*' ~/.config/hypr/wallpapers/videos/actual/ &
 

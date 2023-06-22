@@ -11,7 +11,7 @@
 
 /** ********** Waybar Window ********** **/
 window#waybar {
-    background-color: #f5f5f5;
+    background: rgba(255,255,255,0.4);
 	color: #1e1e2e;
     border: 2px solid #313244;
     transition-property: background-color;
@@ -21,8 +21,16 @@ window#waybar {
     padding-right: 15px;
 }
 
+tooltip {
+    background-color: #e5e5e5
+}
+
 window#waybar.hidden {
     opacity: 0.5;
+}
+
+#workspaces *{
+    font-family: "icomoon";
 }
 
 #workspaces button:hover {
@@ -159,10 +167,13 @@ window#waybar.hidden {
 	padding: 2px 8px;
 }
 
+#image *,
 #custom-menu {
 	margin-left: 15px;
 	padding: 2px 6px;
+	color: green;
 	font-size: 16px;
+	font-family: "icomoon", sans-serif;
 }
 
 #custom-power {
@@ -187,7 +198,7 @@ window#waybar.hidden {
 }
 
 /** Common style **/
-#backlight, 
+#backlight,
 #battery,
 #clock,
 #cpu,
@@ -197,6 +208,8 @@ window#waybar.hidden {
 #mpd,
 #tray,
 #pulseaudio,
+#hyprland-language,
+#language,
 #network {
 	border-radius: 4px;
 	margin: 6px 0px;

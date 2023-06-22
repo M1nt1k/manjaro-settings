@@ -6,12 +6,12 @@
     "name": "main-bar", 
     "id": "main-bar", 	
     "layer": "top", 	
-    "mode": "dock", 	
+    // "mode": "dock", 	
     "exclusive": true, 	
     "passthrough": false, 
     "position": "top",
     "output": "eDP-1", 	
-    "height": 32, 		
+    "height": 40, 		
     "width": "", 		
     "spacing": 6, 		
     "margin": 0, 		
@@ -22,7 +22,7 @@
     "fixed-center": true, 
     "ipc": true, 		
  
-    "modules-left": ["custom/menu", "wlr/workspaces", "tray"],
+    "modules-left": ["image#custom-manjaro", "wlr/workspaces", "tray"],
     "modules-center": ["hyprland/window"], //"mpd"
-    "modules-right": ["pulseaudio", "network", "battery", "clock"],
+    "modules-right": ["hyprland/language", "pulseaudio", "network", "battery", "clock"],
 }

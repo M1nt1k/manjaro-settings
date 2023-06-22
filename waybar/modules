@@ -28,7 +28,7 @@
 		"1": "",
 		"2": "",
 		"3": "",
-		"4": "",
+		"4": "",
 		"5": "",
         "6": "6",
         "7": "7",
@@ -84,9 +84,20 @@
            
 	// waybar-custom
     "custom/menu": {
-         "format": "",
+         "format": " m1nt1k",
          "tooltip": false,
-         "on-click": "$HOME/.config/hypr/scripts/menu",
+         "on-click": "$HOME/.config/hypr/scripts/menu"
+    },
+
+    "hyprland/language": {
+        "format": "{short}"
+    },
+
+    "image#custom-manjaro": {
+	"exec": "$HOME/.config/waybar/logo.sh",
+	"size": 16,
+	"interval": 1,
+	"on-click": "$HOME/.config/hypr/scripts/menu",
     },
 
     "custom/power": {
